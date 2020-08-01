@@ -10,5 +10,12 @@ class Profile(models.Model):
     password = models.CharField(max_length=66)
     nickname = models.CharField(max_length=25, unique=True, default=login)
 
+    class Meta:
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'
+
     def __str__(self):
         return f'nickname - {self.nickname}, id - {self.id}'
+
+    def profiles_list(self):
+        pass
